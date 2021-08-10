@@ -5,13 +5,15 @@ import Gallery from "./components/gallery";
 
 function App() {
   return (
-    <div>
+ 
+      <div>
       <Nav></Nav>
       <main>
-      
+        <Gallery></Gallery>
         <About></About>
       </main>
     </div>
+   
   );
 }
 

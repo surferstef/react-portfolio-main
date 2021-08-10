@@ -10,8 +10,8 @@ function Gallery() {
           "Photos of grocery stores, food trucks, and other commercial projects",
         };
       return (
-    <section> 
-      
+    <section>
+     
       <p>{currentCategory.name}</p>
       <div>
       

@@ -68,12 +68,9 @@ function Nav() {
     <nav>
       <ul className="flex-row">
         <li className="mx-2">
-          <a href="#about">
-            About me
+          <a>
+            Stefan Hall
           </a>
-        </li>
-        <li>
-          <span>Contact</span>
         </li>
         {categories.map((category) => (
           <li
