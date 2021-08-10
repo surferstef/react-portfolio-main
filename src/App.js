@@ -26,8 +26,10 @@ function App() {
     };
 
     return (
+     
       <div>
         <div>
+          <Nav></Nav>
            <Header currentTab={currentTab} setCurrentTab={setCurrentTab}></Header>
         </div>
         <div>
@@ -39,6 +41,7 @@ function App() {
          <footer></footer>
        </div>  
    </div>
+  
   );
 }
 
