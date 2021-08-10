@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Nav from './components/nav';
 import About from './components/about'
-//import Header from './components/about';
-import Project from "./components/project";
+import Header from './components/header';
+import Portfolio from './components/portfolio';
+import Contact from './components/contact';
+import Resume from './components/resume';
+//import Project from "./components/project";
 
 
 function App() {

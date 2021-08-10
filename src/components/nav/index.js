@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
-const [currentCategory, setCurrentCategory] = useState(categories[0]);
-const [categories] = useState([
+const categories = [
     {
         name: "About Me",
         description: "Brief Bio about Stefan.",
@@ -19,7 +18,7 @@ const [categories] = useState([
         name: "Resume",
         description: "My Resume",
     },
-]);
+];
 function Nav() {
 
     return (
@@ -31,17 +30,13 @@ function Nav() {
             Stefan Hall
           </a>
         </li>
-        
         {categories.map((category) => (
-          <li className={`mx-1 ${
-              currentCategory.name === category.name && 'navActive'
-              }`} key={category.name}>
-            <span
-              onClick={() => {
-                setCurrentCategory(category)
-              }}
-            >
-              {capitalizeFirstLetter(category.name)}
+          <li
+            className="mx-1"
+            key={category.name}
+          >
+            <span onClick={categorySelected} >
+              {category.name}
             </span>
           </li>
         ))}
