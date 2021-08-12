@@ -62,6 +62,12 @@ function categorySelected(name) {
       </span>
     </li>
   ))}
-
+{/* <Nav
+  categories={categories}
+  setCurrentCategory={setCurrentCategory}
+  currentCategory={currentCategory}
+  contactSelected={contactSelected}
+  setContactSelected={setContactSelected}
+></Nav> */}
 
 export default Nav;

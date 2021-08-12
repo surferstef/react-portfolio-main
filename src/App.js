@@ -8,41 +8,62 @@ import Resume from './components/resume';
 //import Project from "./components/project";
 
 
-function App() {
-    const [currentTab, setCurrentTab] = useState('about');
-    const renderTab = () => {
-      switch(currentTab) {
-        case "about":
-          return <About />;
-        case "portfolio":
-          return <Portfolio />;
-        case "contact":
-          return <Contact />;
-        case "resume":
-          return <Resume />;
-        default:
-          return null;
-      }
-    };
 
-    return (
-     
-      <div>
-        <div>
-          <Nav></Nav>
-           <Header currentTab={currentTab} setCurrentTab={setCurrentTab}></Header>
-        </div>
-        <div>
-           <main>
-             {renderTab()}
-            </main>
-       </div>
-       <div>
-         <footer></footer>
-       </div>  
-   </div>
+// function App() {
+//     const [currentTab, setCurrentTab] = useState('header');
+//     const renderTab = () => {
+//       switch(currentTab) {
+//         case "about":
+//           return <About />;
+//         case "portfolio":
+//           return <Portfolio />;
+//         case "contact":
+//           return <Contact />;
+//         case "resume":
+//           return <Resume />;
+//         default:
+//           return null;
+//       }
+//     };
+
+//     return (
+      
+      
+//       <div>
+//         <div>
+//           <Nav></Nav>
+//            <Header currentTab={currentTab} setCurrentTab={setCurrentTab}></Header>
+//         </div>
+//         <div>
+//            <main>
+//              {renderTab()}
+//             </main>
+//        </div>
+//        <div>
+//          <footer></footer>
+//        </div>  
+//    </div>
   
-  );
-}
+//   );
+// }
 
+function App() {
+  const [contactSelected, setContactSelected] = useState(false);
+
+return (
+<main>
+{!contactSelected ? (
+  <>
+    <About></About>
+  </>
+) : (
+    <Contact></Contact>
+  )}
+  <Nav
+  contactSelected={contactSelected}
+  setContactSelected={setContactSelected}
+></Nav>
+</main>
+);
+}
 export default App;
