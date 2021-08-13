@@ -3,8 +3,6 @@ import { validateEmail } from '../../utils/helpers';
 
 
 
-
-
 function Contact() {
     const [errorMessage, setErrorMessage] = useState('');
     const [formState, setFormState] = useState({

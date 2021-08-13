@@ -5,6 +5,7 @@ import Header from './components/header';
 import Portfolio from './components/portfolio';
 import Contact from './components/contact';
 import Resume from './components/resume';
+import Project from './components/project';
 //import Project from "./components/project";
 
 
@@ -47,23 +48,32 @@ import Resume from './components/resume';
 //   );
 // }
 
-function App() {
-  const [contactSelected, setContactSelected] = useState(false);
+// function App() {
+//   const [contactSelected, setContactSelected] = useState(false);
 
-return (
-<main>
-{!contactSelected ? (
-  <>
-    <About></About>
-  </>
-) : (
-    <Contact></Contact>
-  )}
-  <Nav
-  contactSelected={contactSelected}
-  setContactSelected={setContactSelected}
-></Nav>
-</main>
-);
-}
+// return (
+// <main>
+// <Nav></Nav>
+// {!contactSelected ? (
+//   <>
+//     <About></About>
+//   </>
+// ) : (
+//     <Contact></Contact>
+//   )}
+ 
+// </main>
+// );
+// }
+
+function App() {
+  return(
+  <main>
+    <Nav></Nav>
+   <About></About>
+   <Contact></Contact>
+   <Project></Project>
+  </main>
+  )
+};
 export default App;
