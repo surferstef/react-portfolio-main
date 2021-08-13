@@ -6,7 +6,7 @@ import photoGameMuffin from '../../assets/projects/gameMuffin.png';
 
 function Project() {
    
-  const currentCategory = [
+  const projectCategory = [
          {
            name: "ArtWalkMan",
            description: "Project 1: Museum Virtual WalkThru",
@@ -26,27 +26,27 @@ function Project() {
       return (
     <section>
       <h1>My Projects</h1>
-      <p>{currentCategory[0].name}</p>
+      <p>{projectCategory[0].name}</p>
       <div>
-        <a>{currentCategory[0].description}</a>
+        <a>{projectCategory[0].description}</a>
           <img
             src={photoArt}
             alt="Project 1: Museum Virtual WalkThru"
             className="img-thumbnail mx-1"
             />
       </div>
-      <p>{currentCategory[1].name}</p>
+      <p>{projectCategory[1].name}</p>
       <div>
-        <a>{currentCategory[1].description}</a>
+        <a>{projectCategory[1].description}</a>
           <img
             src={photoCalc}
             alt="Project 1: Museum Virtual WalkThru"
             className="img-thumbnail mx-1"
             />
       </div>
-      <p>{currentCategory[2].name}</p>
+      <p>{projectCategory[2].name}</p>
       <div>
-        <a>{currentCategory[2].description}</a>
+        <a>{projectCategory[2].description}</a>
           <img
             src={photoGameMuffin}
             alt="Project 3: Game Muffin MVC"
