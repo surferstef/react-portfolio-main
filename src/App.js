@@ -6,18 +6,90 @@ import Portfolio from './components/portfolio';
 import Contact from './components/contact';
 import Resume from './components/resume';
 import Project from './components/project';
+//import Footer from './components/footer';
 //import Project from "./components/project";
 
 
 
+function App() {
+const [categories] = useState([
+  {
+      name: "About Me",
+      description: "Brief Bio about Stefan.",
+  },
+  {
+      name: " Portfolio",
+      description: "Portfolio of coding work I have completed!",
+  },
+  {
+      name: "Contact",
+      description: "My Contact Information",
+  },
+  {
+      name: "Resume",
+      description: "My Resume",
+  },
+]);
+
+const [currentCategory, setCurrentCategory] = useState(categories[0]);
+const renderTab = () => {
+  switch (currentCategory) {
+    case "about":
+      return <About />;
+    case "portfolio":
+      return <Project />;
+    case "contact":
+      return <Contact />;
+    case "resume":
+      return <Resume />;
+    default:
+      return null;
+  }
+};
+return (
+  <div>
+    <Nav
+      categories={categories}      
+       setCurrentCategory={setCurrentCategory}
+      currentCategory={currentCategory}
+     ></Nav>
+    <div>
+      <Header currentCategory={currentCategory} setCurrentCategory={setCurrentCategory}></Header>
+    </div>
+    <div>
+      <main>{renderTab()}</main>
+    </div>
+   
+  </div>
+);
+// return (
+  
+//   <div>
+//     <Nav
+//       categories={categories}
+//       setCurrentCategory={setCurrentCategory}
+//       currentCategory={currentCategory}
+//     ></Nav>
+//     <main>
+//       <div>
+//         <About></About>
+//         <Contact></Contact>
+//         <Project></Project>
+//       </div>
+//     </main>
+//   </div>
+
+}
+
+
 // function App() {
-//     const [currentTab, setCurrentTab] = useState('header');
+//     const [currentTab, setCurrentTab] = useState('about');
 //     const renderTab = () => {
 //       switch(currentTab) {
 //         case "about":
 //           return <About />;
 //         case "portfolio":
-//           return <Portfolio />;
+//           return <Project />;
 //         case "contact":
 //           return <Contact />;
 //         case "resume":
@@ -36,9 +108,7 @@ import Project from './components/project';
 //            <Header currentTab={currentTab} setCurrentTab={setCurrentTab}></Header>
 //         </div>
 //         <div>
-//            <main>
-//              {renderTab()}
-//             </main>
+//            <main>{renderTab()}</main>
 //        </div>
 //        <div>
 //          <footer></footer>
@@ -66,14 +136,14 @@ import Project from './components/project';
 // );
 // }
 
-function App() {
-  return(
-  <main>
-    <Nav></Nav>
-   <About></About>
-   <Contact></Contact>
-   <Project></Project>
-  </main>
-  )
-};
+// function App() {
+//   return(
+//   <main>
+//     <Nav></Nav>
+//    <About></About>
+//    <Contact></Contact>
+//    <Project></Project>
+//   </main>
+//   )
+// };
 export default App;
